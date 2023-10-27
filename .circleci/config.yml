@@ -10,6 +10,7 @@ jobs:
     shell: /bin/bash --login -o pipefail
     steps:
       - checkout
+      - run: bundle update
       - run: bundle install
       - run:
           name: Fastlane
@@ -46,6 +47,7 @@ jobs:
     shell: /bin/bash --login -o pipefail
     steps:
       - checkout
+      - run: bundle update
       - run: bundle install
       - run:
           name: Fastlane
