@@ -5,7 +5,7 @@ jobs:
   build-and-test:
     macos:
       xcode: 14.3.1
-    working_directory: /Users/distiller/project
+    working_directory: ~/
     environment:
       FL_OUTPUT_DIR: output
       FASTLANE_LANE: test
