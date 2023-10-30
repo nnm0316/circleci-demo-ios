@@ -1,4 +1,6 @@
 version: 2.1
+orbs:
+  ruby: circleci/ruby@2.1.0
 jobs:
   build-and-test:
     macos:
@@ -48,8 +50,6 @@ jobs:
     shell: /bin/bash --login -o pipefail
     steps:
       - checkout
-      - run: gem install bundler
-      - run: bundle install
       - run: bundle update --bundler
       - run:
           name: Fastlane
